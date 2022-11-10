@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Report: Codable {
+public class Report: Codable, Identifiable {
     /// The ID of the report.
     public let id: String
     /// The action taken in response to the report.

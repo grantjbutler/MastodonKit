@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Notification: Codable {
+public class Notification: Codable, Identifiable {
     /// The notification ID.
     public let id: String
     /// The notification type.

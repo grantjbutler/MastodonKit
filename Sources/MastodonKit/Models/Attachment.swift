@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Attachment: Codable {
+public class Attachment: Codable, Identifiable {
     /// ID of the attachment.
     public let id: String
     /// Type of the attachment.

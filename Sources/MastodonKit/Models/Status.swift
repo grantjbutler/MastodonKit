@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Status: Codable {
+public class Status: Codable, Identifiable {
     /// The ID of the status.
     public let id: String
     /// A Fediverse-unique resource ID.

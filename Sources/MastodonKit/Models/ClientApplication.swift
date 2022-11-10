@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ClientApplication: Codable {
+public class ClientApplication: Codable, Identifiable {
     /// The application ID.
     public let id: String
     /// Where the user should be redirected after authorization.
