@@ -61,6 +61,7 @@ public struct Client: ClientType {
         task.resume()
     }
     
+    @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
     public func run<Model>(_ request: Request<Model>) async throws -> (Model, Pagination?) {
         return try await withUnsafeThrowingContinuation({ continuation in
             run(request) { result in
