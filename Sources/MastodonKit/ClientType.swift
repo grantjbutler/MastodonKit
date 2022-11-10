@@ -27,4 +27,11 @@ public protocol ClientType {
     ///   - completion: The completion block to be called when the request is complete.
     ///   - result: The request result.
     func run<Model>(_ request: Request<Model>, completion: @escaping (_ result: Result<Model>) -> Void)
+
+    /// Performs the network request.
+    ///
+    /// - Parameters:
+    ///   - request: The request to be performed.
+    @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+    func run<Model>(_ request: Request<Model>) async throws -> (Model, Pagination?)
 }
