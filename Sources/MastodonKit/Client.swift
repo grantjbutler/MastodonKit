@@ -60,4 +60,17 @@ public struct Client: ClientType {
 
         task.resume()
     }
+    
+    public func run<Model>(_ request: Request<Model>) async throws -> (Model, Pagination?) {
+        return try await withUnsafeThrowingContinuation({ continuation in
+            run(request) { result in
+                switch result {
+                case let .failure(error):
+                    continuation.resume(throwing: error)
+                case let .success(model, pagination):
+                    continuation.resume(returning: (model, pagination))
+                }
+            }
+        })
+    }
 }

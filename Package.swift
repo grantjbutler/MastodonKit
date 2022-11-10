@@ -14,6 +14,9 @@ import PackageDescription
 
 let package = Package(
     name: "MastodonKit",
+    platforms: [
+        .iOS(.v13),
+    ],
     products: [
         .library(name: "MastodonKit", targets: ["MastodonKit"])
     ],
