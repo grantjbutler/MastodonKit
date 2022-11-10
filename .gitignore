@@ -16,6 +16,10 @@ xcuserdata
 
 /Packages
 /.build
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/config/registries.json
+DerivedData/
+xcuserdata/
 
 # AppCode
 
